@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jorden</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: rgb(27, 27, 27);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    width: 80%;
+    height: 80%;
+    background: rgb(64, 170, 189);
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav .logo{
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 6px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color: rgb(64, 170, 189);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+.content .text{
+    color: #fff;
+    width: 40%;
+}
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.content .text p{
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+}
+.content .image{
+    width: 40%;
+}
+.content .image img{
+    width: 400px;
+}
+
+@media (min-width:950px) and (max-width:1150px){
+    .content .image img{width: 330px;}  
+}
+
+@media (max-width:950px){
+    .content, nav{
+        flex-direction: column;
+        justify-content: center;  
+    }
+    .content .image, .content .text{
+        width: 80%;
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a class="logo" href="https://www.adidas.com/us">Adidas</a>
+            <ul>
+                <li><a href="https://www.adidas.com/us/men">Men</a></li>
+                <li><a href="https://www.adidas.com/us/women">Women</a></li>
+                <li><a href="https://www.adidas.com/us/kids">Kids</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h2>Adidas, <br>runing shoes</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ipsam magnam, officia tempora at ipsum voluptatum.</p>
+            </div>
+            <div class="image">
+                <img src="Adidas.png" alt="adidas shoes">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
